@@ -1,3 +1,5 @@
+echo -e '\033[41;37m If you cannot download the pre-trained models automatically, please download them yourself and put them under the 'Params' fold \033[0m'
+
 # Create a virtual environment 
 virtualenv --no-site-packages -p python3 ~/DeepFaceDrawing
 
@@ -12,11 +14,11 @@ pip install -U pip
 
 # install necessary libraries
 cd DeepFaceDrawing-Jittor
-pip install jittor==1.1.7.0
+pip install jittor==1.2.2.09
 pip install pyqt5==5.9.2
-pip install Pillow
-pip install scipy
-pip install dominate
+pip install Pillow==8.0.1
+pip install scipy==1.5.4
+pip install dominate==2.6.0
 pip install opencv-python==4.1.0.25
 mv ./heat/bg.jpg ./heat/.jpg
 
