@@ -41,10 +41,8 @@ for x,fileName in enumerate(images_path):
     combine_model.part_weight['mouth'] = params[i][3]
     combine_model.part_weight[''] = params[i][4]
     
-    print(mat_img.shape)
     combine_model.predict_shadow(mat_img)
     
-    print(combine_model.generated)
     cv2.imwrite('ori'+ str(x) +'.jpg',cv2.cvtColor(combine_model.generated, cv2.COLOR_BGR2RGB))
     i = i + 1
     jt.gc()
