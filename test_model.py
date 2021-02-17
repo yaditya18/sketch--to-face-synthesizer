@@ -27,8 +27,7 @@ params = [
 i = 0
 
 for x,fileName in enumerate(images_path):
-    #fileName = fileRoot + str(x) + "_out_Similarity.jpg"
-    print(fileName)
+    print('Input file:',fileName)
     mat_img = cv2.imread(fileName)
     mat_img = cv2.resize(mat_img, (512, 512), interpolation=cv2.INTER_CUBIC)
     mat_img = cv2.cvtColor(mat_img, cv2.COLOR_RGB2BGR)
@@ -43,6 +42,8 @@ for x,fileName in enumerate(images_path):
     
     combine_model.predict_shadow(mat_img)
     
-    cv2.imwrite('ori'+ str(x) +'.jpg',cv2.cvtColor(combine_model.generated, cv2.COLOR_BGR2RGB))
+    output_file = 'ori'+ str(x) +'.jpg'
+    print('Output file:',output_file)
+    cv2.imwrite(output_file,cv2.cvtColor(combine_model.generated, cv2.COLOR_BGR2RGB))
     i = i + 1
     jt.gc()
