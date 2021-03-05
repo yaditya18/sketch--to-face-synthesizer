@@ -6,11 +6,8 @@ virtualenv --no-site-packages -p python3 ~/DeepFaceDrawing
 # Activate the virtual environment
 source ~/DeepFaceDrawing/bin/activate
 
-# download DeepFaceDrawing code
-git clone https://github.com/IGLICT/DeepFaceDrawing-Jittor
-
 # Update pip
-pip install -U pip
+python3.7 -m pip install install -U pip
 
 # install necessary libraries
 cd DeepFaceDrawing-Jittor
@@ -24,9 +21,9 @@ mv ./heat/bg.jpg ./heat/.jpg
 
 # download pretrained model 
 cd ./Params
-wget https://www.dropbox.com/s/5s5c4zuq6jy0cgc/Combine.zip
+wget -O Combine.zip https://www.dropbox.com/s/5s5c4zuq6jy0cgc/Combine.zip
 unzip Combine.zip && rm Combine.zip
-wget https://www.dropbox.com/s/cs4895ci51h8xn3/AE_whole.zip
+wget -O AE_whole.zip https://www.dropbox.com/s/cs4895ci51h8xn3/AE_whole.zip
 unzip AE_whole.zip && rm AE_whole.zip
 
 # run code
