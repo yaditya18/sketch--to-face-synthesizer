@@ -1,7 +1,7 @@
 echo -e '\033[41;37m If you cannot download the pre-trained models automatically, please download them yourself and put them under the 'Params' fold \033[0m'
 
 # Create a virtual environment 
-virtualenv --no-site-packages -p python3 ~/DeepFaceDrawing
+virtualenv --no-site-packages -p python3.7 ~/DeepFaceDrawing
 
 # Activate the virtual environment
 source ~/DeepFaceDrawing/bin/activate
