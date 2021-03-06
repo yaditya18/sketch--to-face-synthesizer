@@ -10,7 +10,6 @@ source ~/DeepFaceDrawing/bin/activate
 python3.7 -m pip install install -U pip
 
 # install necessary libraries
-cd DeepFaceDrawing-Jittor
 pip install jittor==1.2.2.09
 pip install pyqt5==5.9.2
 pip install Pillow==8.0.1
