@@ -7,7 +7,7 @@ virtualenv --no-site-packages -p python3 ~/DeepFaceDrawing
 source ~/DeepFaceDrawing/bin/activate
 
 # Update pip
-python3.7 -m pip install install -U pip
+python3.7 -m pip install -U pip
 
 # install necessary libraries
 pip install jittor==1.2.2.09
